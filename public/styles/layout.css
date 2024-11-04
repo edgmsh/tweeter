@@ -24,3 +24,9 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+   /* Layout shifter */
+   .layout {
+    flex-direction: row;
+    /* Add padding so navbar doesn't overlap */
+    padding-top: 120px;
+  }
