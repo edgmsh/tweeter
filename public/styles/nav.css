@@ -1,0 +1,51 @@
+nav {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  height: 90px;
+  background-color: #4056A1;
+  
+  color: #FFFFFF;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+
+/* site logo */
+nav span {
+  font-family: "Bungee", sans-serif;
+}
+
+/* "write a new tweet" section */
+nav > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav i {
+  color: red;
+}
+
+nav i:hover {
+  transform: scale(1.5);
+  transition: 500ms;
+}
+
+/* Desktop sizing */
+@media only screen and (min-width: 1024px) {
+  /* Change the navbar color to match expected behaviour in assignment gif */
+  .nav {
+    padding-top: 0px;
+    background-color: #28a745;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+}
