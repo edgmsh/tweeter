@@ -1,4 +1,4 @@
-nav {
+.nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
   height: 90px;
@@ -13,39 +13,90 @@ nav {
   position: fixed;
 }
 
-/* site logo */
-nav span {
-  font-family: "Bungee", sans-serif;
-}
-
-/* "write a new tweet" section */
-nav > div {
+.nav__secondary {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-family: "Source Sans 3", sans-serif;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
 }
 
-nav a {
-  text-decoration: none;
-  color: #ffffff;
+.nav_secondary__description {
+  margin: 0;
+  padding: 0;
 }
 
-nav i {
+.nav__header {
+  font-family: 'Bungee', sans-serif; 
+  color: #FFFFFF; 
+}
+
+.nav__secondary__icon {
   color: red;
 }
 
-nav i:hover {
-  transform: scale(1.5);
-  transition: 500ms;
+nav span {
+  font-family: 'Bungee', sans-serif; 
+  color: #FFFFFF; 
 }
 
-/* Desktop sizing */
-@media only screen and (min-width: 1024px) {
-  /* Change the navbar color to match expected behaviour in assignment gif */
-  .nav {
-    padding-top: 0px;
-    background-color: #28a745;
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+.header {
+  height: 520px;
+  width: 50%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background-color: #FEBE10;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  margin-left: 5%;
 }
+
+.header__image {
+  display: block;
+}
+
+.header__name {
+  color: white;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+padding-left: 5%;
+padding-right: 5%;
+padding-top: 5em;
+}
+
+
+/* Another tablet breakpoint is minimum width of 768px */
+@media only screen and (max-width: 768px) {
+  /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
+  .header {
+      padding-top: 150px;
+      margin-left: 0px;
+      width: 100%;
+  }
+
+  .nav {
+      padding-top: 0px;
+      background-color: #28a745;
+      background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  }
+
+  .app-container{
+      display: flex;
+      flex-direction: column;
+  }
+  main {
+      width: 100%;
+      padding-top: 20px;
+  }
 }

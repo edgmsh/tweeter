@@ -21,6 +21,9 @@ body {
   font-size: 24px;
 }
 
+.bungee {
+  font-family: 'Bungee', sans-serif;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -29,4 +32,9 @@ body {
     flex-direction: row;
     /* Add padding so navbar doesn't overlap */
     padding-top: 120px;
+  }
+
+  main {
+    width: 90%;
+    background-color: #f4f1ec;
   }

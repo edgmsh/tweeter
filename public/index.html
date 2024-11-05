@@ -1,57 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- External CSS for font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-    <!-- External CSS for Bungee fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <!-- External CSS for Source Sans 3  fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+
+    <!-- External Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav class="nav">
       <span>
-      <h2> tweeter </h2>
+        <h1>tweeter</h1>
       </span>
-      <div>
-        <div>
-          <a href="#tweet-text"><strong>Write</strong> a new tweet</a>
-        </div>
-        <i class="fa-solid fa-angles-down"></i>
+      </div>
+      <div class="nav__secondary">
+        <p class="nav_secondary__description">
+          <strong>Write</strong> a new tweet
+        </p>
+        <i class="fa-solid fa-angles-down nav__secondary__icon"></i>
       </div>
     </nav>
-    <!-- Main page layout container -->
-    <div class="layout">
-      <!-- User profile -->
-      <header id="profileHeader">
-        <div>
-          <img src="/images/profile-hex.png" alt="user profile photo" />
-        </div>
-        <div>
-          <h2>Ed Garmash</h2>
-        </div>
+
+    <div class="app-container">
+      <header class="header">
+        <img class="header__image" src="/images/profile-hex.png">
+        <h2 class="header__name">
+          Ed Garmash
+        </h2>
       </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+  
+      <!-- Page-specific (main) content here -->
+      <main>
+        <section class="new-tweet">
+          <h2 class="new-tweet__header">Compose Tweet</h2>
+          <form action="/tweets/" method="post" id="new-tweet__form">
+            <div class="new-tweet__inputs" id="new-tweet__inputs">
+              <label class="new-tweet__inputs__label" for="text">
+                What are you humming about?
+              </label>
+              <textarea class="new-tweet__inputs__text" id="new-tweet__inputs__text" name="text"></textarea>
+              <label id="errorMessage" class="error" for="text"></label>
+            </div>
+            
+            <div class="new-tweet__controls">
+              <button class="new-tweet__controls__action bungee" type="submit">
+                Tweet
+              </button>
+              <output 
+                name="counter"
+                class="new-tweet__controls__counter counter bungee"
+                for="tweet-text"
+                id="tweet-character-limit">
+                140
+              </output>
+            </div>
+          </form>
+        </section>
+        <section class="tweets" id="tweets">
+  
+        </section>
+      </main>
+    </div>
+    <footer></footer>
   </body>
 </html>
