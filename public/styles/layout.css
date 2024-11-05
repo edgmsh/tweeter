@@ -36,5 +36,11 @@ body {
 
   main {
     width: 90%;
-    background-color: #f4f1ec;
+    background-color: inherit;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5em;
+
+
   }
