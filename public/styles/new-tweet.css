@@ -23,9 +23,6 @@ body {
   color: black;
 }
 
-.new-tweet__header {
-  color: black;
-}
 .new-tweet__inputs {
   display: flex;
   flex-direction: column;
@@ -33,6 +30,8 @@ body {
 }
 
 .new-tweet__inputs__label {
+  display: flex;
+  font-size: 18px;
 }
 
 .new-tweet__inputs__text {
