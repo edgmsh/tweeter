@@ -101,4 +101,4 @@ $(document).ready(function(form) {
     const form = $(event.target);
     sendTweet(form);
   });
-}); 
+});
