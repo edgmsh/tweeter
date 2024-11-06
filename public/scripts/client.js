@@ -3,7 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const MAX_TWEET_LENGTH = 141;
+const MAX_TWEET_LENGTH = 140;
 
 
 const loadTweets = function() {
@@ -84,7 +84,7 @@ const sendTweet = function(form) {
     return;
   }
 
-  if(formData[0].value.length >= MAX_TWEET_LENGTH) {
+  if(formData[0].value.length > MAX_TWEET_LENGTH) {
     displayErrorMessage("Tweet is too long");
     return;
   }
