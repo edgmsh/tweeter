@@ -88,7 +88,7 @@ const sendTweet = function(form) {
     displayErrorMessage("Tweet is too long");
     return;
   }
-  $.post("/tweets/", form.serializeArray(), (result) => {
+  $.post("/tweets/", formData, (result) => {
     loadTweets();
   });
 }
