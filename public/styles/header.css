@@ -18,9 +18,8 @@
   align-items: center;
 }
 
-/* desktop sizing */
+/* desktop */
 @media only screen and (min-width: 1024px) {
-  /* Take up smaller % of space on large screen */
   #profileHeader {
     align-self: flex-start;
     width: 25%;
