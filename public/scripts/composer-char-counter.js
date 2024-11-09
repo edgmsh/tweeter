@@ -21,7 +21,7 @@ $(document).ready(function() {
   }
   
 
-  getTweetInputElement().on('keyup', function(event) {
+  getTweetInputElement().on('input', function(event) {
     const element = event.target;
     if (!element) {
       return;
