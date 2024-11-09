@@ -35,6 +35,10 @@
   color: red;
 }
 
+.nav__secondary__icon:hover {
+  color: white;
+}
+
 nav span {
   font-family: 'Bungee', sans-serif; 
   color: #FFFFFF; 
