@@ -5,7 +5,7 @@
  */
 const MAX_TWEET_LENGTH = 140;
 
-
+// function to refresh tweets container with updated list of tweets (usually after new tweet)
 const loadTweets = function() {
 
   $.get('/tweets',
@@ -14,7 +14,7 @@ const loadTweets = function() {
     }
   );
 }
-
+// converts each tweet object to html and adds it to the page
 const renderTweets = function(tweets) {
   let tweetContainer = $("#tweets");
   tweetContainer.empty();
@@ -30,6 +30,7 @@ const escape = function (str) {
   return div.innerHTML;
 };
 
+// converts individual tweet object into html
 const  createTweetElement = function(data) {
   const dateLabel = timeago.format(data.created_at);
   return `
