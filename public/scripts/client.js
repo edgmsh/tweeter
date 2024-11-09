@@ -91,6 +91,8 @@ const sendTweet = function(form) {
   }
   $.post("/tweets/", formData, (result) => {
     loadTweets();
+    $("#new-tweet__inputs__text").val("");
+    $("output.counter").val(140);
   });
 }
 
